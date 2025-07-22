@@ -2,6 +2,8 @@
 
 This project demonstrates how to integrate [openai-agents-redis](https://pypi.org/project/openai-agents-redis/) using Docker containers.
 
+More details about **openai-agents-redis** can be found in its [repo](https://github.com/rafaelpierre/openai-agents-redis).
+
 ## Requirements
 
 * [Docker](https://docker.io)
@@ -11,7 +13,7 @@ This project demonstrates how to integrate [openai-agents-redis](https://pypi.or
 
 To run the project, follow these steps:
 
-1. Start Redis and Redis Insight using Docker Compose:
+1. Start [Redis](https://redis.io) and [RedisInsight](https://redis.io/insight/) using Docker Compose:
     ```bash
     docker compose up
     ```
@@ -32,4 +34,8 @@ To run the project, follow these steps:
 
 ## Visualizing Session Data
 
-The `docker-compose.yml` file includes services for the OpenAI agents application and a Redis container for storing session data. RedisInsight, a free tool from Redis, can be used to connect to the Redis container and visualize session data. To use RedisInsight, launch the application and connect to the Redis instance using the container's host and port (typically `localhost:6379` if mapped). This allows you to inspect keys, view stored session information, and monitor interactions in real time.
+The `docker-compose.yml` file includes services for the OpenAI agents application and a Redis container for storing session data.
+
+[RedisInsight](https://redis.io/insight/), a free tool from [Redis](https://redis.io), can be used to connect to the Redis container and visualize session data. To use RedisInsight, launch the application and connect to the RedisInsight instance using the container's host and port (typically `localhost:5540` if mapped).
+
+This allows you to inspect keys, view stored session information, and monitor interactions in real time.
