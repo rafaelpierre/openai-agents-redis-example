@@ -1,12 +1,17 @@
 # OpenAI Agents Redis Example
 
-This project demonstrates how to integrate OpenAI agents with Redis using Docker containers.
+This project demonstrates how to integrate [openai-agents-redis](https://pypi.org/project/openai-agents-redis/) using Docker containers.
+
+## Requirements
+
+* [Docker](https://docker.io)
+* [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service)
 
 ## Getting Started
 
 To run the project, follow these steps:
 
-1. Start the required services using Docker Compose:
+1. Start Redis and Redis Insight using Docker Compose:
     ```bash
     docker compose up
     ```
@@ -14,7 +19,7 @@ To run the project, follow these steps:
     ```bash
     docker build -t openai-agents-cli .
     ```
-3. Run the CLI container, ensuring it uses the same Docker network as the other containers (e.g., `openai-agents-redis-example_agents-net`):
+3. Run the CLI container in interactive mode, ensuring it uses the same Docker network as the other containers (e.g., `openai-agents-redis-example_agent-net`):
     ```bash
     docker run -it \
         --network openai-agents-redis-example_agent-net \
