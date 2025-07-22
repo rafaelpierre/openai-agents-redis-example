@@ -1,0 +1,22 @@
+services:
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    networks:
+      - agent-net
+    logging:
+      driver: "none"
+
+  redisinsight:
+    image: redis/redisinsight:latest
+    ports:
+      - "5540:5540"
+    networks:
+      - agent-net
+    logging:
+      driver: "none"
+
+networks:
+  agent-net:
+    driver: bridge
